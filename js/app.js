@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	$('#button-add').click(function() {
-		$('.list').hide();
+		// $('.list').hide();
 		console.log("clicked");
+		console.log('#inputbox').text();
 	}
 	);
 
