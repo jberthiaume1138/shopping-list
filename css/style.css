@@ -5,10 +5,32 @@
 body {
 	max-width: 1200px;
 	/* Typography */
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+header div {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-end;
+	text-align: center;
+	margin: 0;
 }
 
 header h1 {
+	/* Typography */
+	font-size: 3em;
+	font-weight: 400;
+	margin: 0 1em;
+}
 
+header h2 {
+	/* Typography */
+	font-size: 0.85em;
+	font-weight: 300;
+	color: #404040;
+	text-align: center;
 }
 
 section .input {
