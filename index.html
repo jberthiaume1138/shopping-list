@@ -23,27 +23,33 @@
 	</div>
 </header>
 
-<section class="input-section">
-	<p>Enter each item in the box, then click Add or Press Enter. You can also edit the quantity.</p>
+<section id="input-section">
 	<input type="text" id="input-quantity" value="1"></input>
 	<input type="text" id="input-item" value="Nutella"></input>
 	<button type="button" id="button-add">Add</button>
 </section>
 
-<section class="list-section">
-	<p id="list" class="list">Headlines for List</p>
-	<ul>
-		<li><p>Cheesey Poofs</p></li>
-		<li><p>Chainsaw oil</p></li>
-		<li><p>Shotgun shells</p></li>
-		<li><p>Beef-a-roni</p></li>
-		<li><p>Twinkies</p></li>
-	</ul>
+<section id="list-section">
+	<div>
+		<ul id="list">
+			<li>
+				<img src="images/checkbox.gif" height="20" width="20">
+				<p>Cheesey Poofs</p>
+				<img src="images/remove-x.gif" height="20" width="20">
+			</li>
+			<li><p>Chainsaw oil</p></li>
+			<li><p>Shotgun shells</p></li>
+			<li><p>Beef-a-roni</p></li>
+			<li><p>Twinkies</p></li>
+		</ul>
+	</div>
 </section>
 
 <footer>
+	<p>Click here to clear the list and start over</p>
 	<button type="button" id="button-clear">Clear</button>
-	<p>Are you sure you want to clear the list?</p>
+	<p>Are you sure you want to clear the list? This cannot be undone.</p>
+	<button type="button" id="button-sure">Clear</button>
 </footer>
 	
 <script src="http://code.jquery.com/jquery.min.js"></script>

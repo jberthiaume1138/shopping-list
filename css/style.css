@@ -18,6 +18,7 @@ header div {
 	justify-content: center;
 	align-items: flex-end;
 	margin: 0 auto;
+	padding: 0 1em;
 }
 
 header h1 {
@@ -38,18 +39,12 @@ header h2 {
 	margin: 0 1em;
 }
 
-section.input-section {
+#input-section {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 	margin-top: 1em;
-}
-
-section.input-section p {
-	margin: 0;
-	padding: 0;
-	font-size: 0.75em;
-
+	margin-bottom: 1em;
 }
 
 #input-quantity {
@@ -60,7 +55,6 @@ section.input-section p {
 	text-align: right;
 }
 
-
 #input-item {
 	width: 12em;
 	height: 2em;
@@ -69,16 +63,42 @@ section.input-section p {
 }
 
 #button-add {
-	height: 3em;
+	height: 2em;
 	width: 6em;
 	margin-left: 1em;
+	font-weight: 400;
+	background-color: #60B044;
+	color: white;
 }
 
-.list {
-	display: block;
+#list-section {
+	width: 100%;
+	margin: 0 auto;
 }
 
-.list li {
+#list {
+	text-align: center;
+}
+
+#list li {
 	list-style: none;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: flex-start;
 }
 
+#list p {
+	margin: 0;
+	padding: 0;
+}
+
+#button-clear {
+
+}
+
+#button-sure {
+	width: 5em;
+	background-color: red;
+	color: #FFFFFF;
+}
