@@ -11,17 +11,20 @@ body {
 }
 
 header div {
+	/* layout */
+	width: 100%;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row;
+	justify-content: center;
 	align-items: flex-end;
-	text-align: center;
-	margin: 0;
+	margin: 0 auto;
 }
 
 header h1 {
 	/* Typography */
 	font-size: 3em;
 	font-weight: 400;
+	/* layout */
 	margin: 0 1em;
 }
 
@@ -30,13 +33,52 @@ header h2 {
 	font-size: 0.85em;
 	font-weight: 300;
 	color: #404040;
+	/* layout */
 	text-align: center;
+	margin: 0 1em;
 }
 
-section .input {
+section.input-section {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-top: 1em;
+}
 
+section.input-section p {
+	margin: 0;
+	padding: 0;
+	font-size: 0.75em;
+
+}
+
+#input-quantity {
+	width: 2em;
+	height: 2em;
+	padding: 0.50em;
+	margin-left: 1em;
+	text-align: right;
+}
+
+
+#input-item {
+	width: 12em;
+	height: 2em;
+	padding: 0.50em;
+	margin-left: 0.75em;
+}
+
+#button-add {
+	height: 3em;
+	width: 6em;
+	margin-left: 1em;
 }
 
 .list {
 	display: block;
 }
+
+.list li {
+	list-style: none;
+}
+

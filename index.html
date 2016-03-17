@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Shopping List</title>
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
@@ -13,9 +14,9 @@
 
 <header>
 	<div>
-		<img src="images/zombie.png" alt="zombie" height="64">
+		<img src="images/zombie.png" alt="zombie" height="64" width="64">
 		<h1>Shopping List</h1>
-		<img src="images/cart.jpg" alt="shopping-cart" height="64">
+		<img src="images/cart.jpg" alt="shopping-cart" height="64" width="64">
 	</div>
 	<div>
 		<h2>Helping you stock up for the zombie apocalypse, since 2016</h2>
@@ -23,14 +24,14 @@
 </header>
 
 <section class="input-section">
-	<p>Instructions</p>
+	<p>Enter each item in the box, then click Add or Press Enter. You can also edit the quantity.</p>
 	<input type="text" id="input-quantity" value="1"></input>
 	<input type="text" id="input-item" value="Nutella"></input>
 	<button type="button" id="button-add">Add</button>
 </section>
 
 <section class="list-section">
-	<p id="list" class="list">Default Text</p>
+	<p id="list" class="list">Headlines for List</p>
 	<ul>
 		<li><p>Cheesey Poofs</p></li>
 		<li><p>Chainsaw oil</p></li>
