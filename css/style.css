@@ -93,11 +93,19 @@ header h2 {
 	padding: 0;
 }
 
+#clear {
+	display: block;
+}
+
+#confirm {
+	display: none;
+}
+
 #button-clear {
 
 }
 
-#button-sure {
+#button-confirm {
 	width: 5em;
 	background-color: red;
 	color: #FFFFFF;
