@@ -39,6 +39,23 @@ header h2 {
 	margin: 0 1em;
 }
 
+@media only screen and (max-width: 515px) {
+ 	header h1 {
+		/* Typography */
+		font-size: 2em;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+ 	header img {
+		display: none;
+	}
+}
+
+/* end header styling */
+
+/* input section styling */
+
 #input-section {
 	display: flex;
 	justify-content: center;
@@ -135,4 +152,17 @@ footer {
 	width: 5em;
 	background-color: red;
 	color: #FFFFFF;
+}
+
+@media only screen and (max-width: 515px) {
+ 	header h1 {
+		/* Typography */
+		font-size: 2em;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+ 	header img {
+		display: none;
+	}
 }
