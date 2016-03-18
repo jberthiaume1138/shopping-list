@@ -87,11 +87,16 @@ header h2 {
 	display: flex;
 	flex-flow: row;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: baseline;
+	
 }
 
+#list img {
+	width: 16px;
+}
 #list p {
-	margin: 0;
+	text-align: left;
+	margin: 0 1em;
 	padding: 0;
 }
 
