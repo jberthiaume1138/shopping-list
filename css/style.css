@@ -78,10 +78,12 @@ header h2 {
 
 #list {
 	text-align: center;
+	/*margin: 0 auto;*/
+	padding: 0;
 }
 
 #list li {
-	list-style: none;
+	/*list-style: none;*/
 	display: flex;
 	flex-flow: row;
 	justify-content: center;
@@ -93,16 +95,25 @@ header h2 {
 	padding: 0;
 }
 
+footer {
+	width: 100%;
+}
+
 #clear {
-	display: block;
+	margin: 0 auto;
+	text-align: center;
 }
 
 #confirm {
+	margin: 0 auto;
+	text-align: center;
 	display: none;
 }
 
 #button-clear {
-
+	width: 5em;
+	background-color: blue;
+	color: #FFFFFF;
 }
 
 #button-confirm {
