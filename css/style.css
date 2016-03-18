@@ -92,7 +92,11 @@ header h2 {
 	/*list-style: none;*/
 	display: flex;
 	flex-flow: row;
+<<<<<<< HEAD
 	justify-content: space-between;
+=======
+	justify-content: center;
+>>>>>>> e6718451bc259d603a0fe3dec47045ffafde4cd8
 	align-items: baseline;
 	
 }
