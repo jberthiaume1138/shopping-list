@@ -76,6 +76,12 @@ header h2 {
 	margin: 0 auto;
 }
 
+#list-section div {
+	max-width: 25em;
+	margin: 0 auto;
+	padding: 0 0.5em;
+}
+
 #list {
 	text-align: center;
 	/*margin: 0 auto;*/
@@ -86,12 +92,17 @@ header h2 {
 	/*list-style: none;*/
 	display: flex;
 	flex-flow: row;
-	justify-content: center;
-	align-items: flex-start;
+	justify-content: space-between;
+	align-items: baseline;
+	
 }
 
+#list img {
+	width: 16px;
+}
 #list p {
-	margin: 0;
+	text-align: left;
+	margin: 0 1em;
 	padding: 0;
 }
 
@@ -108,6 +119,11 @@ footer {
 	margin: 0 auto;
 	text-align: center;
 	display: none;
+}
+
+#confirm p {
+	font-size: 1.5em;
+	font-weight: 400;
 }
 
 #button-clear {
