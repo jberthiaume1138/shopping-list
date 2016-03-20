@@ -14,12 +14,12 @@ $(document).ready(function() {
 		}
 	})
 
+	$('.check').on('click',function() {
+		//apply finished class to entire <li></li>
+	 	console.log("gotIt was clicked");
+	 	$('li.list-item').addClass("complete");
+	})
 
-
-	// $('#input-item').click(function(e) {
-	// 	console.log($(this).val());
-	// 	// doStuff(e);
-	// })
 
 
 
@@ -58,10 +58,9 @@ function addItem (newItem) {
 	console.log($('#input-item').val().trim()); //debugging, remove
 
 	var newListTag = '<li class="list-item">';
-	var gotIt = '<img src="images/checkbox.gif" height="16" width="16">';
+	var gotIt = '<img class="check" src="images/checkbox.gif" height="16" width="16">';
 	var remove = '<img src="images/remove-x.gif" height="16" width="16">';
 	$('#list').prepend(newListTag + gotIt + '<p>' + newItem + '</p>' + remove + '</li>');
-	// $('#list:first').prepend('<p>IMAGE</p>');
 };
 
 

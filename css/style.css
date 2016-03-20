@@ -113,15 +113,25 @@ header h2 {
 	align-items: baseline;
 }
 
-#list img {
+/*#list img {
 	width: 16px;
-}
+}*/
+
 #list p {
 	text-align: left;
 	margin: 0 1em;
 	padding: 0;
 }
 
+.complete {
+	color: gray;
+	text-decoration: line-through;
+}
+
+
+
+
+/* footer stuff, including list clear */
 footer {
 	width: 100%;
 }
@@ -156,7 +166,6 @@ footer {
 
 @media only screen and (max-width: 515px) {
  	header h1 {
-		/* Typography */
 		font-size: 2em;
 	}
 }
