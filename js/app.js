@@ -1,10 +1,14 @@
+'use strict'
 $(document).ready(function() {
-	$('#button-add').on("click",function() {
+	
+
+	$('#button-add').on("click",function(e) {
 		// console.log("button-add clicked");
-		var newItem = $('#input-item').val();
 		var newListTag = '<li class="list-item">';
-		// var newItem = "Ham";
-		btnAdd(newItem);
+		addItem($('#input-item').val());
+		e.stopPropagation();
+
+
 		// console.log("clicked");
 		// btnAdd(newItem);
 		//var for GotIt <img>
@@ -13,17 +17,17 @@ $(document).ready(function() {
 
 	$('#input-item').keydown(function(e) {
 		console.log(e.keyCode);
-		if (e.keyCode == 13) {
-			// call function to add item to the list
+		if (e.keyCode == 13) {	//enter key pressed
+			addItem($('#input-item').val()); 	// calls function to add item to the list
 		}
 	})
 
-	
 
-	$('#input-item').click(function(e) {
-		console.log($(this).val());
-		// doStuff(e);
-	})
+
+	// $('#input-item').click(function(e) {
+	// 	console.log($(this).val());
+	// 	// doStuff(e);
+	// })
 
 
 
@@ -52,7 +56,7 @@ $(document).ready(function() {
 // };
 
 
-function btnAdd (newItem) {
+function addItem (newItem) {
 	console.log("clicked");
 	console.log(newItem);
 	// $('#list').prepend(newListTag + newItem + "</li>");
