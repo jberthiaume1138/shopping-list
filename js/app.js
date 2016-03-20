@@ -1,24 +1,16 @@
 'use strict'
 $(document).ready(function() {
 	
-
 	$('#button-add').on("click",function(e) {
-		// console.log("button-add clicked");
-		var newListTag = '<li class="list-item">';
-		addItem($('#input-item').val());
-		e.stopPropagation();
-
-
-		// console.log("clicked");
-		// btnAdd(newItem);
-		//var for GotIt <img>
-		//var for X <img>
+		// var newItem = checkInput(); 		// call to input validator
+		// console.log(newItem);
+		// addItem(newItem);			 	// successful input, call the list adder
+		addItem($('#input-item').val().trim());
 	})
 
 	$('#input-item').keydown(function(e) {
-		console.log(e.keyCode);
-		if (e.keyCode == 13) {	//enter key pressed
-			addItem($('#input-item').val()); 	// calls function to add item to the list
+		if (e.keyCode == 13) {					//enter key was pressed
+			addItem($('#input-item').val()); 
 		}
 	})
 
@@ -45,21 +37,30 @@ $(document).ready(function() {
 		// $('#list').empty();
 		$('#clear').show();
 		$('#confirm').hide();	
+
 		//this is destroying the <ul>, so it would have to be re-created for new items...
 		//need logic for insertion
 		var instructions = "<p>Enter your items, one at a time in the box above, then click Add or press Enter.</p>";
 		$('#list').replaceWith(instructions);
 	});
 
-// function doStuff(e) {
-// 	console.log("Stuff from box = " + $(this).val());
+// function checkInput () {
+// 	// basic input validation
+// 	if ( $('#input-item').val().trim().length > 0) 
+// 		return $('#input-item').val().trim();
+// 	else 
+// 		$('#input-item').val('Enter an item here!');	// throw input error	
 // };
 
 
+
 function addItem (newItem) {
-	console.log("clicked");
-	console.log(newItem);
-	// $('#list').prepend(newListTag + newItem + "</li>");
+	console.log($('#input-item').val().trim()); //debugging, remove
+
+	var newListTag = '<li class="list-item">';
+	var gotIt = '<img src="images/checkbox.gif" height="16" width="16">';
+	var remove = '<img src="images/remove-x.gif" height="16" width="16">';
+	$('#list').prepend(newListTag + gotIt + '<p>' + newItem + '</p>' + remove + '</li>');
 	// $('#list:first').prepend('<p>IMAGE</p>');
 };
 
