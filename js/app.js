@@ -7,16 +7,17 @@ $(document).ready(function() {
 		if (newItem.length > 0) {
 			addItem(newItem);	// input is valid, proceed
 			$('#no-input').hide();
-			$('#input-item').val(""); //clear the box for next item
+			$('#input-item').val(""); //clear out box for next item
 		}	
 		else 		
 			$('#no-input').show();
 	})
 
-	// allow use of enter key
+	// enable use of enter key to add an item
 	$('#input-item').keydown(function(e) {
 		if (e.keyCode == 13) {
-			addItem($('#input-item').val().trim()); 
+			addItem($('#input-item').val().trim());
+			$('#input-item').val(""); //clear out box for next item
 		}
 	})
 
@@ -58,9 +59,6 @@ function addItem (newItem) {
 	var remove = '<img class="remove" src="images/remove-x.gif" height="16" width="16">';
 	$('#list').prepend(newListTag + gotIt + '<p>' + newItem + '</p>' + remove + '</li>');
 };
-
-
-
 
 
 
