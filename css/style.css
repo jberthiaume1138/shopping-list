@@ -141,7 +141,13 @@ header h2 {
 	text-decoration: line-through;
 }
 
+img.check:hover {
+	cursor: pointer;
+}
 
+img.remove:hover {
+	cursor: pointer;
+}
 
 
 /* footer stuff, including list clear */

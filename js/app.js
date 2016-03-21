@@ -9,15 +9,16 @@ $(document).ready(function() {
 			$('#no-input').hide();
 			$('#input-item').val(""); //clear the box for next item
 		}	
-		else 		// input is missing
+		else 		
 			$('#no-input').show();
 	})
 
-	// $('#input-item').keydown(function(e) {
-	// 	if (e.keyCode == 13) {					//enter key was pressed
-	// 		addItem($('#input-item').val()); 
-	// 	}
-	// })
+	// allow use of enter key
+	$('#input-item').keydown(function(e) {
+		if (e.keyCode == 13) {
+			addItem($('#input-item').val().trim()); 
+		}
+	})
 
 
 
@@ -54,7 +55,7 @@ $(document).ready(function() {
 function addItem (newItem) {
 	var newListTag = '<li class="list-item">';
 	var gotIt = '<img class="check" src="images/checkbox.gif" height="16" width="16">';
-	var remove = '<img src="images/remove-x.gif" height="16" width="16">';
+	var remove = '<img class="remove" src="images/remove-x.gif" height="16" width="16">';
 	$('#list').prepend(newListTag + gotIt + '<p>' + newItem + '</p>' + remove + '</li>');
 };
 
