@@ -21,35 +21,31 @@ $(document).ready(function() {
 		}
 	})
 
-
-
-	$('.check').on('click',function() {
-		//apply finished class to entire <li></li>
-		$(this).closest('li').toggle('.complete');
+	// enables checking items off, or back on
+	$('#list').on('click','.check',function() {
+		$(this).closest('li').toggleClass('complete');
 	 	console.log("gotIt was clicked");
-	 	// $('li.list-item').addClass("complete");
 	})
 
+	// permanently remove an item
+	$('#list').on('click','.remove',function() {
+		$(this).closest('li').hide();
+	 	console.log("x was clicked");
+	})
 
-
-
+	//reset the list - display warning
 	$('#button-clear').click(function() {
 		console.log("button-clear clicked");
 		$('#clear').hide();
 		$('#confirm').show();
 	})
 
+	// reset the list
 	$('#button-confirm').click(function() {
-		// handler to clear the list
 		console.log("button-confirm clicked");
-		// $('#list').empty();
+		$('#list').empty();
 		$('#clear').show();
-		$('#confirm').hide();	
-
-		//this is destroying the <ul>, so it would have to be re-created for new items...
-		//need logic for insertion
-		var instructions = "<p>Enter your items, one at a time in the box above, then click Add or press Enter.</p>";
-		$('#list').replaceWith(instructions);
+		$('#confirm').hide();
 	});
 
 

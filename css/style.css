@@ -65,13 +65,13 @@ header h2 {
 	margin-bottom: 2em;
 }
 
-#input-quantity {
+/*#input-quantity {
 	width: 2em;
 	height: 2em;
 	padding: 0.50em;
 	margin-left: 1em;
 	text-align: right;
-}
+}*/
 
 #input-item {
 	width: 12em;
@@ -139,6 +139,7 @@ header h2 {
 .complete {
 	color: gray;
 	text-decoration: line-through;
+	background-color: #E6E6E6;
 }
 
 img.check:hover {
