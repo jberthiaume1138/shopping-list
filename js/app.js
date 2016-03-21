@@ -2,25 +2,31 @@
 $(document).ready(function() {
 	
 	$('#button-add').on("click",function(e) {
-		// var newItem = checkInput(); 		// call to input validator
-		// console.log(newItem);
-		// addItem(newItem);			 	// successful input, call the list adder
-		addItem($('#input-item').val().trim());
+		// basic input validation
+		var newItem = $('#input-item').val().trim();
+		if (newItem.length > 0) {
+			addItem(newItem);	// input is valid, proceed
+			$('#no-input').hide();
+			$('#input-item').val(""); //clear the box for next item
+		}	
+		else 		// input is missing
+			$('#no-input').show();
 	})
 
-	$('#input-item').keydown(function(e) {
-		if (e.keyCode == 13) {					//enter key was pressed
-			addItem($('#input-item').val()); 
-		}
-	})
+	// $('#input-item').keydown(function(e) {
+	// 	if (e.keyCode == 13) {					//enter key was pressed
+	// 		addItem($('#input-item').val()); 
+	// 	}
+	// })
+
+
 
 	$('.check').on('click',function() {
 		//apply finished class to entire <li></li>
+		$(this).closest('li').toggle('.complete');
 	 	console.log("gotIt was clicked");
-	 	$('li.list-item').addClass("complete");
+	 	// $('li.list-item').addClass("complete");
 	})
-
-
 
 
 
@@ -44,19 +50,8 @@ $(document).ready(function() {
 		$('#list').replaceWith(instructions);
 	});
 
-// function checkInput () {
-// 	// basic input validation
-// 	if ( $('#input-item').val().trim().length > 0) 
-// 		return $('#input-item').val().trim();
-// 	else 
-// 		$('#input-item').val('Enter an item here!');	// throw input error	
-// };
-
-
 
 function addItem (newItem) {
-	console.log($('#input-item').val().trim()); //debugging, remove
-
 	var newListTag = '<li class="list-item">';
 	var gotIt = '<img class="check" src="images/checkbox.gif" height="16" width="16">';
 	var remove = '<img src="images/remove-x.gif" height="16" width="16">';

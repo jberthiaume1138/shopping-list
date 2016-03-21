@@ -58,10 +58,11 @@ header h2 {
 
 #input-section {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-end;
 	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 }
 
 #input-quantity {
@@ -87,6 +88,18 @@ header h2 {
 	background-color: #60B044;
 	color: white;
 }
+
+#no-input {
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 1em;
+	flex-basis: 100%;
+	display: none;
+}
+
+/* --------------- start list section ------------- */
+
 
 #list-section {
 	width: 100%;
