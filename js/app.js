@@ -38,6 +38,7 @@ $(document).ready(function() {
 		console.log("button-clear clicked");
 		$('#clear').hide();
 		$('#confirm').show();
+		$('#button-cancel').show();
 	})
 
 	// reset the list
@@ -46,6 +47,14 @@ $(document).ready(function() {
 		$('#list').empty();
 		$('#clear').show();
 		$('#confirm').hide();
+	})
+
+	// cancel clear
+	$('#button-cancel').click(function() {
+		console.log('cancel clicked');
+		$('#clear').show();
+		$('#confirm').hide();
+		$('#button-cancel').hide();
 	});
 
 
