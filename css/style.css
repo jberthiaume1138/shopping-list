@@ -126,9 +126,9 @@ header h2 {
 	align-items: baseline;
 }
 
-/*#list img {
-	width: 16px;
-}*/
+#list li:hover {
+	background-color: #F2F2F2;
+}
 
 #list p {
 	text-align: left;
